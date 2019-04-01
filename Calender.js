@@ -33,7 +33,8 @@ let febAry = Array.from(febRange.by('day', { step: 1 }));
 let febFirst = moment(febAry[0]).format('e'); 
 let febLast = moment(febAry[febAry.length - 1]).format('e');
 let febAry2 = febAry.map(m => m.format('DD'));
-
+//color ma birthday
+febAry2[18] = chalk.blue(febAry2[18]);
 for (let i = 0; i < (6 - febLast); i++) {
      febAry2.push("  ");
 }
@@ -41,6 +42,8 @@ for (let i = 0; i < (6 - febLast); i++) {
 for (let i = 0; i < febFirst; i++) {
     febAry2.unshift("  ");
 }
+
+
 
 let marStart = new Date(2019, 02, 01);
 let marEnd   = new Date(2019, 02, 31);
@@ -65,7 +68,9 @@ let aprAry = Array.from(aprRange.by('day', { step: 1 }));
 let aprFirst = moment(aprAry[0]).format('e'); 
 let aprLast = moment(aprAry[aprAry.length - 1]).format('e');
 let aprAry2 = aprAry.map(m => m.format('DD'));
-
+//color ma aniversary
+//Look, I know it's 4/20, trust me it's a coinsidence
+aprAry2[19] = chalk.blue(aprAry2[19]);
 for (let i = 0; i < (6 - aprLast); i++) {
      aprAry2.push("  ");
 }
